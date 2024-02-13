@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
+a{
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif; /*pour choisir la police du body */
+    background-color: #f3a6724d;
+}
+
+nav{
+    
+    display: flex;
+    flex-wrap: wrap;/*Pour faire glisser les éléments de la liste en dessous de l'image lorsqu'on réduit l'espace*/
+    justify-content: space-between;/* Pour créer un espace entre le bloc profile et la liste*/
+    align-items:center; /*Pour mettre cote à cote le bloc profile et la liste*/
+    background-color: #000;
+    position:sticky; /*Pour que la nav reste afficher même quand on scroll*/
+    top: 0;
+}
+
+
+.tete{
+    display: flex;/*Pour aligner l'image et le titre*/ 
+    align-items: center;/*Pour mettre l'image et le titre cote à cote */
+}
+header .tete img{
+    width: 24vw;/*Pour réduire la taille de l'image*/
+    height:24vw;
+    border-radius:50% ;/*Pour arrondir l'image*/
+}
+nav .profile h1{
+    font-size: 20px;
+    margin-left: 10px ;/*Pour créer un espace entre la photo de profile et le titre*/
+    color: #fff;
+}
+
+nav ul{
+    display: flex;/*Pour aligner les éléments de la liste*/
+    list-style-type: none;/*Permet de retirer les points noirs*/
+}
+nav ul li{
+    margin-left: 20px;/*Pour créer un espace entre les éléments de la liste*/
+    cursor:pointer;/*Pour indiquer à l'utilisateur qu'il faut cliquer*/
+    border-bottom: 1px solid #000;
+    color: #fff;
+}
+/* Pseudo classe permettant de tranformer la couleur du border-bottom lorsque le curseur est au dessus des éléments de la liste */
+nav ul li:hover{
+    border-bottom-color: #fff;
+}
+
+.page-content{
+    margin:4%;
+}
+
+.page-content header{
+    margin-top: 5%;
+    max-width: 80%;/* Pour imposer une largeur maximal au header*/
+}
+
+.page-content header h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 6vw;/*Pour que la taille de la police soit égale à 6% de largeur total de la fenêtre d'affichage */
+}
+
+.page-content header p{
+    line-height: 30px; /*Pour mettre de l'espace entre les lignes de la description */
+    color: #4b4646;
+}
+
+.page-content header button{
+    background-color: inherit;/* Pour que la couleur d'arrière plan du bouton soit celle du body*/
+    border: none; /*Pour retirer les bordures du boutton */
+    outline: none;
+    cursor: pointer;
+    padding: 0;/*Permet d'aligner le boutton avec la description*/
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom:  1px solid#000;
+}
+
+.page-content header button:hover{
+    color:rgb(238, 135, 10) ;
+    border-bottom-color:rgb(238, 135, 10) ;
+}
+
+.page-content .presentation-image{
+    margin-top: 5%;
+}
+
+.page-content .presentation-image img{
+    max-width: 100%;
+    height: auto;
+}
+
+.page-content .projects-section{
+    margin-top: 6%;
+}
+.page-content .projects-section h1{
+    font-family:"Oswald", sans-serif ;
+    text-transform: uppercase;
+    font-size: 3vw;
+}
+.page-content .projects-section .projects{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.page-content .projects-section .projects .project{
+    max-width: 300px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.page-content .projects-section .projects .project h4{
+    margin: 0;
+}
+
+.page-content .projects-section .projects .project .description{
+    padding: 5px;
+    border: 2px solid rgb(212, 180, 37);
+    border-radius: 20px;
+}
+
+.page-content .projects-section .projects .project .dates{
+    font-size: 13px;
+    color: rgb(145, 145, 145);
+}
+
+footer{
+    background-color: #000;
+    max-width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.page-content .projects-section .projects .project .description img{
+    max-width:100%;
+}
+.page-content .skills h1{
+    font-family:"Oswald", sans-serif ;
+    text-transform: uppercase;
+    font-size: 3vw;
+
+}
+.skills{
+    max-width: 100%;
+}
+.aligner{
+    display: flex;
+
+}
+.page-content .skills .name{
+    display: flex;
+    flex-direction: column;
+    color: rgb(238, 135, 10) ;
+    margin-top: 50px;
+    font-size: 2em;
+    font-weight: 500px;
+    margin-right: 40px;
+    
+}
+
+.page-content .name span{
+    margin: 15px 0;
+    box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 50px;
+    border: 5px solid #ebecf0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.page-content .name span:hover{
+    box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #ffffff,
+    inset 9.91px 9.91px 15px #d9dade, inset -9.91px -9.91px 15px #ffffff;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.bar{
+    width: 400px;
+    height: 30px;
+    border-radius:20px ;
+    box-shadow:inset 6px 6px 8px #d9dade,
+        inset -6px -6px 8px #ffffff;
+}
+
+.bar .progress{
+    height:100%;
+    width: 50%;
+    background: linear-gradient(to left,rgb(196, 108, 0),rgb(226, 178, 123));
+    border-radius:20px ;
+}
+
+.bar:nth-child(1) .progress{
+    width: 90%;
+}
+
+.bar:nth-child(2) .progress{
+    width: 90%;
+}
+
+.bar:nth-child(3) .progress{
+    width: 90%;
+}
+
+.bar:nth-child(4) .progress{
+    width: 80%;
+}
+footer a{
+    position:relative;
+    margin: 0 20px ;
+    font-size: 3rem;
+    list-style-type: none;
+}
+
+@media screen and (min-width: 701px){
+    #cv{
+        display: none;
+    }
+}
+/* Ce code là s'exécute uniquement lorsque la taille de l'écran est inférieur ou égal à 700px*/
+@media screen and (max-width: 700px){
+    nav{
+        justify-content: center;/*Pour centrer les éléments de la nav*/
+    }
+    nav ul{
+        display: none;/* Pour faire disparaitre les onglets au format mobile */
+    }
+    .page-content header{
+        margin-top: 10%;
+        max-width: 100%;
+    }
+    .page-content .projects-section{
+        margin-top: 15%;
+    }
+    .page-content .projects-section h1{
+        font-size: 1.5em;
+    }
+    .page-content .projects-section .projects .project{
+        margin: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .page-content .skills h1{
+        font-size: 1.5em;
+    }
+
+    .bar{
+        width: 150px;
+        height: 30px;
+        border-radius:20px ;
+        box-shadow:inset 6px 6px 8px #d9dade,
+            inset -6px -6px 8px #ffffff;
+    }
+}
+
