@@ -1,18 +1,8 @@
-// Pour cacher la page du dessus
-setTimeout(function() {
-    var overlay = document.getElementById('overlay');
-    overlay.classList.add('hidden');
-}, 1000); // 1000 millisecondes = 1 secondes
-
-// Animation d'apparition des sections
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
